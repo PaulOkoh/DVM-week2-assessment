@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,25 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+let cartTotal = cart.reduce((acc, curr) => acc + curr.price, 0);
 
+console.log(cartTotal);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,7 +55,10 @@ const cart = [
 
 //CODE HERE
 
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+  return cartTotal * (1 + tax) - Number(couponValue);
+}
+console.log(calcFinalPrice(cartTotal, 5, 0.06));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,6 +83,22 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    Model for customer object :
+    Properties: 
+        - name (string) >>>> need a name to identify customer
+        - phone number (number) >>>> need a phone number to notify / contact customer
+        - zip code (number) >>>>> need for delivery purposes
+        - credit card info (number) >>>> to process payment
+        - item/ type / name of item ordered (string) >>>> to prepare correct order
+        - quantity of item ordered  (number)>>>>> for proper billing / charge
+        - total charge(number) >>>> for proper billing/payment
+
+    Make sure that you give your properties values
+    of the correct data type.
+
+
+    
+
 */
 
 /*
@@ -88,3 +107,15 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+  name: "Michael Douglas",
+  phone: 2145555555,
+  zipcode: 85411,
+  ccard: 123445678902,
+  item: "Aloha Pizza",
+  quantity: 2,
+  total: 21.99,
+};
+
+console.log(customer.zipcode);
