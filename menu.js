@@ -213,21 +213,21 @@ console.log(filteredFood);
 
 //CODE HERE
 
-function filterByProperty(property, number, type) {
-  property = foodArr.price;
-  if (type === "above") {
-    return foodArr.filter((food) => food.property > number);
-  } else {
-    return foodArr.filter((food) => food.property < number);
-  }
-}
-console.log(
-  filterByProperty(
-    foodArr.map((element) => element.price),
-    9,
-    "below"
-  )
-);
+// function filterByProperty(property, number, type) {
+//   property = foodArr.price;
+//   if (type === "above") {
+//     return foodArr.filter((food) => food.property > number);
+//   } else {
+//     return foodArr.filter((food) => food.property < number);
+//   }
+// }
+// console.log(
+//   filterByProperty(
+//     foodArr.map((element) => element.price),
+//     9,
+//     "below"
+//   )
+// );
 
 //console.log(filterByProperty(foodArr.price))
 // console.log(
@@ -263,7 +263,4 @@ console.log(
 
 //console.log(filterByProperty(foodArr.price, 9, "above"));
 
-// console.log(
-//   "<<<===========>>>",
-//   foodArr.map((arr) => arr["price"])
-// );
+console.log("<<<===========>>>", foodArr.);
